@@ -4,7 +4,16 @@ This is a [homebrew](https://brew.sh) [tap](https://docs.brew.sh/Taps) for my pr
 
 ### Current formulae
 
-- [nix-search-cli](https://github.com/peterldowns/nix-search-cli)
+[nix-search-cli](https://github.com/peterldowns/nix-search-cli)
+
+```bash
+brew install peterldowns/tap/nix-search-cli
+```
+
+[localias](https://github.com/peterldowns/localias)
+```bash
+brew install peterldowns/tap/localias
+```
 
 ### Installing a formula
 
