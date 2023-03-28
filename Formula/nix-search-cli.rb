@@ -1,12 +1,9 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
 class NixSearchCli < Formula
-  desc "search for nix packages via search.nixos.org"
+  desc "Search for nix packages via search.nixos.org"
   homepage "https://github.com/peterldowns/nix-search-cli"
-  license "MIT"
-
   url "https://github.com/peterldowns/nix-search-cli/archive/refs/tags/release-1680019370-866017b.tar.gz"
   sha256 "6cadc554fbc08c45902564f919d01485fd3a6ac8aabd11c74525263c01bb6981"
+  license "MIT"
 
   depends_on "go" => :build
 

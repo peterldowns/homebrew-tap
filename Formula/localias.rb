@@ -1,12 +1,9 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
 class Localias < Formula
-  desc "search for nix packages via search.nixos.org"
+  desc "Manage local domain aliases for devservers"
   homepage "https://github.com/peterldowns/localias"
-  license "MIT"
-
   url "https://github.com/peterldowns/localias/archive/refs/tags/release-1677875419-b50c9a4.tar.gz"
   sha256 "86fa9202281a603d81536b05b75c259aa8f0928ea3d6ed73e015c75fc1ade9e7"
+  license "MIT"
 
   depends_on "go" => :build
 
