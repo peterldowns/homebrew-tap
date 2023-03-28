@@ -2,7 +2,7 @@
 
 This is a [homebrew](https://brew.sh) [tap](https://docs.brew.sh/Taps) for my projects.
 
-### Current formulae
+## Current formulae
 
 [nix-search-cli](https://github.com/peterldowns/nix-search-cli)
 
@@ -15,7 +15,7 @@ brew install peterldowns/tap/nix-search-cli
 brew install peterldowns/tap/localias
 ```
 
-### Installing a formula
+## Installing a formula
 
 You can install the formula `<formula-name>` by:
 
@@ -26,3 +26,9 @@ brew install peterldowns/tap/<formula-name>
 brew tap peterldowns/tap
 brew install <formula-name>
 ```
+
+## Contributing / docs / notes
+
+- https://docs.brew.sh/Formula-Cookbook
+- https://rubydoc.brew.sh/Formula
+- https://docs.brew.sh/Bottles
