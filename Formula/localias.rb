@@ -14,7 +14,7 @@ class Localias < Formula
     version = tag_name.split("+")[0]
     commit = tag_name.split(".").last
 
-    ldflags = %x[./scripts/golang-ldflags.sh #{version} #{commit}]
+    ldflags = `./scripts/golang-ldflags.sh #{version} #{commit}`
     puts ldflags
     # 0.0.6+commit.037f617.tar.gz
     # -s -w is standard to make small binaries without debugging information or symbol tables
