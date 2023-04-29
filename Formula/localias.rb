@@ -1,8 +1,8 @@
 class Localias < Formula
   desc "Manage local domain aliases for devservers"
   homepage "https://github.com/peterldowns/localias"
-  url "https://github.com/peterldowns/nix-search-cli/archive/refs/tags/release-1680019370-866017b.tar.gz"
-  sha256 "6cadc554fbc08c45902564f919d01485fd3a6ac8aabd11c74525263c01bb6981"
+  url "https://github.com/peterldowns/localias/archive/refs/tags/release-1677875419-b50c9a4.tar.gz"
+  sha256 "86fa9202281a603d81536b05b75c259aa8f0928ea3d6ed73e015c75fc1ade9e7"
   license "MIT"
 
   depends_on "go" => :build
