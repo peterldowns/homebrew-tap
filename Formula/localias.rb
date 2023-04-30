@@ -4,15 +4,16 @@ class Localias < Formula
   url "https://github.com/peterldowns/localias/archive/refs/tags/0.0.6+commit.58395d1.tar.gz"
   sha256 "fde4fcd6b67a0008493b1c2842f818b3d934905e4785e320f6e03fadad06686e"
   license "MIT"
+  version "0.0.6"
 
   depends_on "go" => :build
 
   bottle do
-    root_url "https://github.com/peterldowns/localias/releases/download/0.0.6+commit.58395d1/"
-    sha256 arm64_montery: "ef002aa52d8cb0ed88432e194070bd5377c144998939234151d5ee039fcf30e1"
-    sha256 montery:       "fcb507b1f47eb867956a2a68c3c6f8c454a3cae880a1cd6893004c7df200dfde"
-    sha256 arm64_linux:   "a2897538201f5d0767638f4a7b9ea15b328532d5cee0b18f026c869075203fa4"
-    sha256 linux:         "26d86bcf9f1a5a75a225664f47ace401d76907ed0be379f363e7c9f621bd80e5"
+    root_url "https://github.com/peterldowns/localias/releases/download/0.0.6%2Bcommit.58395d1"
+    sha256 cellar: :any, arm64_monterey: "ef002aa52d8cb0ed88432e194070bd5377c144998939234151d5ee039fcf30e1"
+    sha256 cellar: :any, monterey:       "fcb507b1f47eb867956a2a68c3c6f8c454a3cae880a1cd6893004c7df200dfde"
+    sha256 cellar: :any, arm64_linux:   "a2897538201f5d0767638f4a7b9ea15b328532d5cee0b18f026c869075203fa4"
+    sha256 cellar: :any, linux:         "26d86bcf9f1a5a75a225664f47ace401d76907ed0be379f363e7c9f621bd80e5"
   end
 
   def install
