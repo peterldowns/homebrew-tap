@@ -4,6 +4,15 @@ This is a [homebrew](https://brew.sh) [tap](https://docs.brew.sh/Taps) for my pr
 
 ## Installables
 
+[pgmigrate](https://github.com/peterldowns/pgmigrate)
+
+```bash
+brew install peterldowns/tap/pgmigrate
+# or
+brew tap peterldowns/tap
+brew install pgmigrate
+```
+
 [nix-search-cli](https://github.com/peterldowns/nix-search-cli)
 
 ```bash

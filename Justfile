@@ -5,8 +5,12 @@ default:
   just --list
 
 update:
+  # download the templated formula from a bottle zip
+  # download all the other bottle zips
+  # update the hashes and stuff with sha256
   ./update-formula.sh peterldowns/nix-search-cli Formula/nix-search-cli.rb
   ./update-formula.sh peterldowns/localias Formula/localias.rb
+  ./update-formula.sh peterldowns/localias Formula/pgmigrate.rb
 
 test-install formula_name:
   #!/usr/bin/env bash
