@@ -1,28 +1,28 @@
 class Pgmigrate < Formula
   desc "Pgmigrate is a modern Postgres migrations CLI and library for golang."
   homepage "https://github.com/peterldowns/pgmigrate"
-  url "https://github.com/peterldowns/pgmigrate/archive/refs/tags/v0.0.5+commit.4996b41.tar.gz"
-  sha256 "5e892e95d7408ce63079a9aa7db48b7065cfefdffe6e8949986d481cc90e2626"
+  url "https://github.com/peterldowns/pgmigrate/archive/refs/tags/v0.0.6+commit.b4febf4.tar.gz"
+  sha256 "a86337989aeb480efdd335219e7d9876408725bedf94b058ea6dedf46410ce1e"
   license "MIT"
-  version "v0.0.5"
+  version "v0.0.6"
 
   depends_on "go" => :build
 
   bottle do
-    root_url "https://github.com/peterldowns/pgmigrate/releases/download/v0.0.5+commit.4996b41"
-    sha256 cellar: :any, arm64_monterey: "0105031e9cecc5d6d2d54ea733727106365b597b41f441b1a165158b8b10298b"
-    sha256 cellar: :any, monterey: "89b30517ce0d9007e236a522b21a7005246e584275e09b61f2b8e27361724594"
-    sha256 cellar: :any, x86_64_linux: "9a9e1fd98be13825bb7bbac2318d416cda3f8b723a533cab894680fad03abc33"
-    sha256 cellar: :any, arm64_linux: "2fba69da4364caaacc043ac7d2e1d02324144636e52e880bddfbeeb6ec5a3ca1"
+    root_url "https://github.com/peterldowns/pgmigrate/releases/download/v0.0.6+commit.b4febf4"
+    sha256 cellar: :any, arm64_monterey: "fa14ed0c502e1c82d702e1c94af98ce240722c002c3006bb3b07df064c277e20"
+    sha256 cellar: :any, monterey: "8c9ce3d3c54f46a9bf782ad352fd077302ed82e9a19a4917e20120df073efcc0"
+    sha256 cellar: :any, x86_64_linux: "bafebd06639373d9c006795a643d2118dd90a54bd0668fa115b5ad6a6e2170ef"
+    sha256 cellar: :any, arm64_linux: "8442cabf752e2f41301bb93828e9aa26e01f2d025530577a65102595f636cee2"
   end
 
   def install
     # Parse the version and commit from the tagref URL because the downloaded
     # .tar.gz isn't a git repository.
-    tag_name = "v0.0.5+commit.4996b41"
-    version = "v0.0.5"
-    commit = "4996b41"
-    ldflags = "-X github.com/peterldowns/pgmigrate/cli/shared.Version=v0.0.5 -X github.com/peterldowns/pgmigrate/cli/shared.Commit=4996b41"
+    tag_name = "v0.0.6+commit.b4febf4"
+    version = "v0.0.6"
+    commit = "b4febf4"
+    ldflags = "-X github.com/peterldowns/pgmigrate/cli/shared.Version=v0.0.6 -X github.com/peterldowns/pgmigrate/cli/shared.Commit=b4febf4"
     # -s -w is standard to make small binaries without debugging information or symbol tables
     # https://stackoverflow.com/a/22276273/829926
     # std_go_args definition is here
