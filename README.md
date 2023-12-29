@@ -30,13 +30,6 @@ brew tap peterldowns/tap
 brew install localias
 ```
 
-[Localias.app](https://github.com/peterldowns/localias) (gui)
-
-```bash
-brew tap peterldowns/tap
-brew install localias.app
-```
-
 ## Help
 
 You can install the formula `<formula-name>` by:
@@ -47,13 +40,6 @@ brew install peterldowns/tap/<formula-name>
 # tap then install
 brew tap peterldowns/tap
 brew install <formula-name>
-```
-
-Casks seem to require you to tap this repository and then install the `<cask-name>`:
-
-```bash
-brew tap peterldowns/tap
-brew install <cask-name>
 ```
 
 ## Contributing / docs / notes
