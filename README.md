@@ -22,7 +22,7 @@ brew tap peterldowns/tap
 brew install nix-search-cli
 ```
 
-[localias](https://github.com/peterldowns/localias) (cli)
+[localias](https://github.com/peterldowns/localias)
 ```bash
 brew install peterldowns/tap/localias
 # or
