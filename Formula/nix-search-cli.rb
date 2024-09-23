@@ -1,21 +1,47 @@
 class NixSearchCli < Formula
   desc "Search for nix packages via search.nixos.org"
   homepage "https://github.com/peterldowns/nix-search-cli"
-  url "https://github.com/peterldowns/nix-search-cli/archive/refs/tags/release-1680019370-866017b.tar.gz"
-  sha256 "6cadc554fbc08c45902564f919d01485fd3a6ac8aabd11c74525263c01bb6981"
+  version "0.1"
   license "MIT"
 
-  depends_on "go" => :build
-
-  def install
-    # -s -w is standard to make small binaries without debugging information or symbol tables
-    # https://stackoverflow.com/a/22276273/829926
-    # std_go_args definition is here
-    # https://github.com/Homebrew/brew/blob/6db7732fa33ab808e405f8ac7673735edd2c8787/Library/Homebrew/formula.rb#L1565
-    system "go", "build", *std_go_args(ldflags: "-s -w", output: bin/"nix-search"), "./cmd/nix-search"
+  on_macos do
+    # darwin-arm-64
+    if Hardware::CPU.arm?
+      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1%2Bcommit.b7ded4d/nix-search-darwin-arm64"
+      sha256 "7862fd112df0333c37f16c5133b6d29389ed4847759cb25dd88d34326d21b5dc"
+      def install
+        bin.install "nix-search-darwin-arm64" => "nix-search"
+      end
+    end
+    # darwin-amd-64
+    if Hardware::CPU.intel?
+      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1%2Bcommit.b7ded4d/nix-search-darwin-amd64"
+      sha256 "f59d534119b6ab3cd46223e5829491d2c358274659d42b8580db60efde83e6b5"
+      def install
+        bin.install "nix-search-darwin-amd64" => "nix-search"
+      end
+    end
+  end
+  on_linux do
+    # linux-arm-64
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1%2Bcommit.b7ded4d/nix-search-linux-arm64"
+      sha256 "b595834c636011a9e3bce0812a49b4e1b0b91004f32efafb0cf10bb35dbf2056"
+      def install
+        bin.install "nix-search-linux-arm64" => "nix-search"
+      end
+    end
+    # linux-amd-64
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1%2Bcommit.b7ded4d/nix-search-linux-amd64"
+      sha256 "f9a7556499e792ea75cbb587ddf60de64d06dde1abaa5f31054d9137718899cb"
+      def install
+        bin.install "nix-search-linux-amd64" => "nix-search"
+      end
+    end
   end
 
   test do
-    system bin/"nix-search", "--help"
+    system "#{bin}/nix-search --help"
   end
 end
