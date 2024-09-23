@@ -1,40 +1,40 @@
 class NixSearchCli < Formula
-  desc "Search for nix packages via search.nixos.org"
+  desc "Search for nix packages via search.nixos.org."
   homepage "https://github.com/peterldowns/nix-search-cli"
   version "0.1"
   license "MIT"
 
   on_macos do
-    # darwin-arm-64
+    # darwin-arm64
     if Hardware::CPU.arm?
-      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1%2Bcommit.b7ded4d/nix-search-darwin-arm64"
-      sha256 "7862fd112df0333c37f16c5133b6d29389ed4847759cb25dd88d34326d21b5dc"
+      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1+commit.e765237/nix-search-darwin-arm64"
+      sha256 "1bd51251fffcd5f451ea164ba8448d533d5a4bfe576dc6e0e3862d44c6e41a5a" # darwin-arm64
       def install
         bin.install "nix-search-darwin-arm64" => "nix-search"
       end
     end
-    # darwin-amd-64
+    # darwin-amd64
     if Hardware::CPU.intel?
-      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1%2Bcommit.b7ded4d/nix-search-darwin-amd64"
-      sha256 "f59d534119b6ab3cd46223e5829491d2c358274659d42b8580db60efde83e6b5"
+      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1+commit.e765237/nix-search-darwin-amd64"
+      sha256 "2c0f54e0bd0afdb9f7598b3c676c7f68d5d137a17f870f4441440f9d0be08caa" # darwin-amd64
       def install
         bin.install "nix-search-darwin-amd64" => "nix-search"
       end
     end
   end
   on_linux do
-    # linux-arm-64
+    # linux-arm64
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1%2Bcommit.b7ded4d/nix-search-linux-arm64"
-      sha256 "b595834c636011a9e3bce0812a49b4e1b0b91004f32efafb0cf10bb35dbf2056"
+      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1+commit.e765237/nix-search-linux-arm64"
+      sha256 "8e0cad9f839605facff3a8f093a7a2105887f7ef81b0fd5525628964a8bb9e8c" # linux-arm64
       def install
         bin.install "nix-search-linux-arm64" => "nix-search"
       end
     end
-    # linux-amd-64
+    # linux-amd64
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1%2Bcommit.b7ded4d/nix-search-linux-amd64"
-      sha256 "f9a7556499e792ea75cbb587ddf60de64d06dde1abaa5f31054d9137718899cb"
+      url "https://github.com/peterldowns/nix-search-cli/releases/download/0.1+commit.e765237/nix-search-linux-amd64"
+      sha256 "09e188e9d96ba598b2a8bd85ddcc38fb9017130efbf5607b19d27eaddae35a49" # linux-amd64
       def install
         bin.install "nix-search-linux-amd64" => "nix-search"
       end
