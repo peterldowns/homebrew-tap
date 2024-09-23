@@ -4,24 +4,19 @@ set positional-arguments
 default:
   just --list
 
+clean:
+  rm **/*.rb.bak
+  rm binaries/*
+
 update:
-  # download the templated formula from a bottle zip
-  # download all the other bottle zips
-  # update the hashes and stuff with sha256
-  ./update-formula.sh peterldowns/nix-search-cli Formula/nix-search-cli.rb
-  ./update-formula.sh peterldowns/localias Formula/localias.rb
-  ./update-formula.sh peterldowns/localias Formula/pgmigrate.rb
+  # downloads the release binaries, calculates the hashes, and updates the Formula file
+  ./update.sh Formula/nix-search-cli.rb nix-search-cli nix-search
+  ./update.sh Formula/localias.rb localias localias
+  ./update.sh Formula/pgmigrate.rb pgmigrate pgmigrate
 
 test-install formula_name:
   #!/usr/bin/env bash
   set -e
-  formula_name=$1
-  HOMEBREW_NO_INSTALL_FROM_API=1 \
-    brew install --build-from-source --verbose --debug \
-    ./Formula/${formula_name}.rb
-
-test-uninstall formula_name:
-  #!/usr/bin/env bash
-  set -e
-  formula_name=$1
-  brew uninstall --formula --debug --force ./Formula/${formula_name}.rb
+  formula_file=$1 # ./Formula/localias.rb
+  HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_FROM_API=1 brew uninstall --debug --force --verbose $formula_file
+  HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_FROM_API=1 brew install --debug --force --verbose $formula_file
