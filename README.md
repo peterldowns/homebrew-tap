@@ -47,3 +47,8 @@ brew install <formula-name>
 - https://docs.brew.sh/Formula-Cookbook
 - https://rubydoc.brew.sh/Formula
 - https://docs.brew.sh/Bottles
+
+```bash
+# install a local formula
+HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_FROM_API=1 brew install --debug --force --verbose ./Formula/pgmigrate.rb
+```

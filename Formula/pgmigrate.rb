@@ -4,6 +4,7 @@ class Pgmigrate < Formula
   version "v0.0.7"
   license "MIT"
 
+
   on_macos do
     # darwin-arm64
     if Hardware::CPU.arm?
