@@ -1,4 +1,10 @@
+# macos
 .DS_Store
+
+# binaries / artifacts
+tmp/
 *.tar.gz
 *.tar.gz.*
-tmp
+
+# older versions of Formulae
+*.bak
